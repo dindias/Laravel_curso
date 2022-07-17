@@ -33,6 +33,8 @@ class ProjectController extends Controller
 
     public function store()
     {
-        return request();
+        Project::create(request()->all());
+
+        return redirect()->route('projects.index');
     }
 }
