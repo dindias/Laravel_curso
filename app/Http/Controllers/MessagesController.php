@@ -18,6 +18,6 @@ class MessagesController extends Controller
 
         Mail::to('danielsandic117@gmail.com')->queue(new MessageReceived($message));
 
-        return 'Datos validados';
+        return back()->with('status', 'Recibimos tu mensaje, te responderemos en menos de 24 horas.');
     }
 }
