@@ -65,6 +65,6 @@ Route::resource('portafolio', 'ProjectController')->names('projects')->parameter
 Route::view('/contacto', 'contact')->name('contact');
 Route::post('contact', 'MessagesController@store')->name('messages.store');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
